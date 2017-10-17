@@ -61,24 +61,34 @@ end
 %  We compute the subgradients at the "breaks" to identify the inverse of
 %  the shrink operator
 
-N =60;
+N =100;
 deltad =2/(N+1);
 daux = (0:deltad:2)';
-uu = Obstacle2(N,daux,deltad);
-xistar = sqrt(2/3);
-breaks = [0 linspace(xistar,3/2,40)];
-vals =pchip(daux,uu,breaks);
+vals = Obstacle2(N,daux,deltad);
+%xistar = sqrt(2/3)+0.01;
+%breaks = [0 linspace(xistar,3/2,40)];
+
+%vals =pchip(daux,uu,breaks);
 
 
 %vals = ppval(wrelax,breaks);
 
 % In general, breaks and vals are obtained by solving an obstacle problem
-slopes = (vals(2:end)-vals(1:end-1))./(breaks(2:end)-breaks(1:end-1));
+slopes = (vals(2:end)-vals(1:end-1))./(daux(2:end)-daux(1:end-1));
+curvature  = (slopes(2:end)-slopes(1:end-1))./(daux(2)-daux(1));
 
-sub = [-1000 slopes; slopes 1000];
+ind = find(curvature >1e-6);
+auxind= [1; ind+1];
+daux2= daux(auxind)'; %because curvature is offset by one in the index
+
+vals2= vals(auxind)';
+slopes2 = (vals2(2:end)-vals2(1:end-1))./(daux2(2:end)-daux2(1:end-1));
+
+
+sub = [-1000 slopes2; slopes2 1000];
 sub = sub(:)';
 
-corners = [breaks;breaks];
+corners = [daux2;daux2];
 corners = corners(:)';
 
 inv_fn = corners + sub/lmb;
