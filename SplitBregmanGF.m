@@ -75,8 +75,11 @@ vals = Obstacle2(N,daux,deltad);
 
 % In general, breaks and vals are obtained by solving an obstacle problem
 slopes = (vals(2:end)-vals(1:end-1))./(daux(2:end)-daux(1:end-1));
-curvature  = (slopes(2:end)-slopes(1:end-1))./(daux(2)-daux(1));
 
+% finite difference estimate for second derivative
+curvature  = 2*(slopes(2:end)-slopes(1:end-1))./(daux(3:end)-daux(1:end-2));
+
+% Drop the "internal" nodes in the "Straight" parts of the relaxation
 ind = find(curvature >1e-6);
 auxind= [1; ind+1];
 daux2= daux(auxind)'; %because curvature is offset by one in the index
