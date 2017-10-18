@@ -61,6 +61,7 @@ end
 %  We compute the subgradients at the "breaks" to identify the inverse of
 %  the shrink operator
 
+tic;
 N =100;
 deltad =2/(N+1);
 daux = (0:deltad:2)';
@@ -96,7 +97,7 @@ corners = corners(:)';
 
 inv_fn = corners + sub/lmb;
 
-
+toc;  % this computes the time for setting up the Shrink operator
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -109,6 +110,7 @@ v = b;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Iteration
 
+tic;
 count = 1; % number of iterations
 objctv =1;
 while((err > tol) && (count <= nstep))
@@ -173,6 +175,7 @@ while((err > tol) && (count <= nstep))
     count = count+1;
     
 end
+toc; % Time for Split Bregman iteration
 % End of iteration
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
