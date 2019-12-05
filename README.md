@@ -2,7 +2,9 @@
 We modify the Split Bregman algorithm to find minimizers of nonsmooth energy functionals in 1-d bounded domains.
 
 # Instructions for use
-There are two main folders. One where Dirichlet boundary conditions are used and that is labeled as Dirichlet_V3, and a second one where Natural boundary conditions are used and that is labeled Natural_V3. In each folder there are four matlab files which are used to reproduced the examples presented in the paper by Gabriela Jaramillo and Shankar Venkataramani. The other folders and files contained previous versions of the same code, and we suggest using version 3 as the most up to date version.
+There are two main folders. One where Dirichlet boundary conditions are used and that is labeled as Dirichlet_V3, and a second one where Natural boundary conditions are used and that is labeled Natural_V3. In each folder there are four matlab files which are used to reproduced the examples presented in the paper by Gabriela Jaramillo and Shankar Venkataramani. 
+
+The other folders and files contained previous versions of the same code, and we suggest using version 3 as the most up to date version. In all versions the algorithm iterates the scheme until the relative error |u_n - un+1| is below a certain tolerence. In the last version, the algorithm also computes the energy at each iteration. It then outputs the function which has the smallest energy from all computed iterations, u_n.
 
 ## Minimizers
 This is the main file that allows one to find minimizers for different energy functionals. One can choose between three non-convex potentials in the gradient variable representing a double well, a half-double well, and a tripple well potential. One can also choose between various examples of lower order potentials which are non-convex. 
