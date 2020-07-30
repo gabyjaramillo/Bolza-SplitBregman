@@ -7,10 +7,12 @@ There are two main folders. One where Dirichlet boundary conditions are used and
 The other folders and files contained previous versions of the same code, and we suggest using version 4 as the most up to date version. 
 
 ## Minimizers
-This is the main file that allows one to find minimizers for different energy functionals. One can choose between four non-convex potentials in the gradient variable representing a double well, a half-double well, a tripple well potential, and a random function. One can also choose between various examples of lower order potentials which are non-convex. 
+This is the main file that allows one to find minimizers for different energy functionals. One can choose between four non-convex potentials in the gradient variable representing a double well, a half-double well, a tripple well, and a random well potential. One can also choose between various examples of lower order potentials which are non-convex. 
 
 ## Obstacle
 Calculates the convex envelop of non-convex potentials using the Split Bregman algorithm. This code is based on the paper by Tran and Osher: An L1 penalty method for general obstacle problems \url{https://epubs.siam.org/doi/abs/10.1137/140963303}.
+
+## bb
 To calculate the convex envelope of the potential, in version 4 we use the 'Beneath and Beyond' algorithm described in \urld{https://link.springer.com/article/10.1023/A:1019191114493}.
 
 ## Split_Bregman_combined
@@ -18,3 +20,6 @@ The algorithm in this file uses the Split Bregman to decompose the minimization 
 
 ## Split_iteration
 It adapts the file Minimizer.m so that one can iterate the calculations to compare the speed of the code for different values of the grid spacing, $\Delta x$.
+
+## Random
+Constructs a random function, which is then used as the non-convex potential in the gradient variable.
