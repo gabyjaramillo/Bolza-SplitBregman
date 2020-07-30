@@ -2,7 +2,7 @@
 We modify the Split Bregman algorithm to find minimizers of nonsmooth energy functionals in 1-d bounded domains.
 
 # Instructions for use
-There are two main folders. One where Dirichlet boundary conditions are used and that is labeled as Dirichlet_V4, and a second one where Natural boundary conditions are used and that is labeled Natural_V4. In each folder there are three matlab files which are used to reproduced the examples presented in the paper by Gabriela Jaramillo and Shankar Venkataramani, \url{https://arxiv.org/abs/1912.03360}.
+There are two main folders. One where Dirichlet boundary conditions are used and that is labeled as DirichletV4, and a second one where Natural boundary conditions are used and that is labeled NaturalV4. In each folder there are three matlab files which are used to reproduced the examples presented in the paper by Gabriela Jaramillo and Shankar Venkataramani, \url{https://arxiv.org/abs/1912.03360}.
 
 The other folders and files contained previous versions of the same code, and we suggest using version 4 as the most up to date version. 
 
