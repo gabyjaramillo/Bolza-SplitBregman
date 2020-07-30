@@ -16,5 +16,5 @@ To calculate the convex envelope of the potential, in version 4 we use the 'Bene
 ## Split_Bregman_combined
 The algorithm in this file uses the Split Bregman to decompose the minimization into two subproblems linking the variable u and its gradient u_x via a constraint. The first subproblem is solved using Gauss-Seidel, while the second problem involving a nonsmooth functional is solved using a shrink operator (proximal gradient method).
 
-# Split_iteration
+## Split_iteration
 It adapts the file Minimizer.m so that one can iterate the calculations to compare the speed of the code for different values of the grid spacing, $\Delta x$.
