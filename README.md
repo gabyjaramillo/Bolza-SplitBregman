@@ -9,12 +9,19 @@ The other folders and files contained previous versions of the same code, and we
 If you do use our code, please let us know: (gabriela@math.uh.edu)
 
 To cite this work:
+
 @unpublished{jaramillo2019microstructure,
-	Author = {Jaramillo, Gabriela and Venkataramani, Shankar C.},
+
+	Author = {Jaramillo, Gabriela and Venkataramani, Shankar C.},	
+	
 	Month = {December},
+	
 	Note = {preprint under review},
+	
 	Title = {A modified split-{B}regman algorithm for computing microstructure through {Y}oung measures},
+	
 	Url = {https://arxiv.org/abs/1912.03360},
+	
 	Year = {2019}}
   
 
