@@ -6,6 +6,18 @@ There are two main folders. One where Dirichlet boundary conditions are used and
 
 The other folders and files contained previous versions of the same code, and we suggest using version 4 as the most up to date version. 
 
+If you do use our code, please let us know: (gabriela@math.uh.edu)
+
+To cite this work:
+@unpublished{jaramillo2019microstructure,
+	Author = {Jaramillo, Gabriela and Venkataramani, Shankar C.},
+	Month = {December},
+	Note = {preprint under review},
+	Title = {A modified split-{B}regman algorithm for computing microstructure through {Y}oung measures},
+	Url = {https://arxiv.org/abs/1912.03360},
+	Year = {2019}}
+  
+
 ## Minimizers
 This is the main file that allows one to find minimizers for different energy functionals. One can choose between four non-convex potentials in the gradient variable representing a double well, a half-double well, a tripple well, and a random well potential. One can also choose between various examples of lower order potentials which are non-convex. 
 
